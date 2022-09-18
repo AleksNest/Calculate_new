@@ -1,11 +1,11 @@
-public interface MathArithmeticsRelation {
+public interface MathArithmeticsReal {
 
 
-    public double sumRelation();
-    public double subRelation();
-    public double divRelation();
-    public double mulRelation();
+    public double sumReal();
 
+    public double subReal();
 
+    public double divReal();
 
+    public double mulReal();
 }

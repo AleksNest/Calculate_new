@@ -1,40 +1,50 @@
-public class CalcRelationExpression implements MathArithmeticsRelation {
+public class CalcRealExpression implements MathArithmeticsReal {
     private double a;
     private double b;
     private String mathOperation;
 
 
-
-    public CalcRelationExpression(Parser parser) {
+    public CalcRealExpression(Parser parser) {
         this.a = parser.getFirst();
         this.b = parser.getSecond();
         this.mathOperation = parser.getOperation();
     }
 
 
-
-    public double solveRelation() throws IllegalAccessException {
+    public double solveReal() throws IllegalAccessException {
         switch (mathOperation) {
             case "+":
-                return sumRelation();
+                return sumReal();
             case "-":
-                return subRelation();
+                return subReal();
             case "/":
-                return divRelation();
+                return divReal();
             case "*":
-                return mulRelation();
+                return mulReal();
             default:
                 throw new IllegalAccessException("IllegalAccessException");
         }
     }
 
     @Override
-    public double sumRelation() {return a+b;}
+    public double sumReal() {
+        return a + b;
+    }
+
     @Override
-    public double subRelation() {return a-b;}
+    public double subReal() {
+        return a - b;
+    }
+
     @Override
-    public double divRelation() {return a/b;}
+    public double divReal() {
+        if (b == 0) System.out.println("Error: devide by zero");
+        return a / b;
+    }
+
     @Override
-    public double mulRelation() {return a*b;}
+    public double mulReal() {
+        return a * b;
+    }
 }
 
