@@ -3,9 +3,9 @@ public class Presenter {
     public Presenter() {
     }
 
-    public static void start() throws IllegalAccessException {
+    public void start() throws IllegalAccessException {
 
-
+        System.out.println("\nThe program for calculating two complex and real numbers ");
         UI input = new UI();
         String flag = "y";
         while (flag.equals("y")) {
